@@ -1,0 +1,122 @@
+[
+  {
+    "sku": 1,
+    "name": "Plexiglass",
+    "description": "8-050 - Basic Door and Window Materials and Methods",
+    "price": 150.09
+  },
+  {
+    "sku": 2,
+    "name": "Rubber",
+    "description": "2-315 - Excavation",
+    "price": 153.8
+  },
+  {
+    "sku": 3,
+    "name": "Brass",
+    "description": "3 - Concrete",
+    "price": 140.15
+  },
+  {
+    "sku": 4,
+    "name": "Granite",
+    "description": "10-530 - Protective Covers",
+    "price": 71.91
+  },
+  {
+    "sku": 5,
+    "name": "Rubber",
+    "description": "1-904 - Hazardous Materials Removal and Disposal",
+    "price": 155.64
+  },
+  {
+    "sku": 6,
+    "name": "Steel",
+    "description": "13-400 - Measurement and Control Instrumentation",
+    "price": 93.46
+  },
+  {
+    "sku": 7,
+    "name": "Plexiglass",
+    "description": "11-040 - Ecclesiastical Equipment",
+    "price": 26.61
+  },
+  {
+    "sku": 8,
+    "name": "Granite",
+    "description": "4-500 - Refractories",
+    "price": 132.97
+  },
+  {
+    "sku": 9,
+    "name": "Glass",
+    "description": "2-240 - Dewatering",
+    "price": 32.27
+  },
+  {
+    "sku": 10,
+    "name": "Steel",
+    "description": "5-700 - Ornamental Metal",
+    "price": 76.3
+  },
+  {
+    "sku": 11,
+    "name": "Vinyl",
+    "description": "14-500 - Material Handling",
+    "price": 49.56
+  },
+  {
+    "sku": 12,
+    "name": "Glass",
+    "description": "1-740 - Cleaning",
+    "price": 66.63
+  },
+  {
+    "sku": 13,
+    "name": "Glass",
+    "description": "15-800 - Air Distribution",
+    "price": 78.53
+  },
+  {
+    "sku": 14,
+    "name": "Glass",
+    "description": "2-790 - Athletic Surfacing",
+    "price": 43.87
+  },
+  {
+    "sku": 15,
+    "name": "Brass",
+    "description": "6-100 - Rough Carpentry",
+    "price": 157.84
+  },
+  {
+    "sku": 16,
+    "name": "Vinyl",
+    "description": "11-680 - Office Equipment",
+    "price": 96.09
+  },
+  {
+    "sku": 17,
+    "name": "Rubber",
+    "description": "12-300 - Manufactured Casework",
+    "price": 199.15
+  },
+  {
+    "sku": 18,
+    "name": "Granite",
+    "description": "3 - Concrete",
+    "price": 113.06
+  },
+  {
+    "sku": 19,
+    "name": "Steel",
+    "description": "11-090 - Checkroom Equipment",
+    "price": 188.91
+  },
+  {
+    "sku": 20,
+    "name": "Rubber",
+    "description": "13-200 - Storage Tanks",
+    "price": 57.72
+  }
+]

@@ -1,0 +1,24 @@
+{
+    "name": "mushtaq/pim",
+    "description": "PimCore simulation",
+    "type": "project",
+    "require": {
+        "openzipkin/zipkin": "^2.0",
+        "monolog/monolog": "^1.23",
+        "symfony/http-foundation": "3.4.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mushtaq\\Pim\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mushtaq Jameel",
+            "email": "mushtaq.jameel@villvay.com"
+        }
+    ],
+    "scripts": {
+      "serve" : "php -S 0.0.0.0:8000"
+    }
+}
