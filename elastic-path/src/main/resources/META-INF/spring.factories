@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.wurthlac.elasticpath.AppAutoConfiguration,\
+com.wurthlac.elasticpath.TracingAutoConfiguration

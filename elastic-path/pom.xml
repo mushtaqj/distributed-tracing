@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.3</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.wurthlac</groupId>
+	<artifactId>elastic-path</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>elastic-path</name>
+	<description>Elastic Path Simulation</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<brave.version>5.13.3</brave.version>
+	</properties>
+
+	<!-- Only declare Brave dependencies here as we want projects to control their own settings -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.zipkin.brave</groupId>
+				<artifactId>brave-bom</artifactId>
+				<version>${brave.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+        <dependency>
+            <groupId>lk.wurthlac</groupId>
+            <artifactId>models</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<!-- Intentionally OkHttp 3 as it doesn't have a Kotlin dependency -->
+			<version>3.14.9</version>
+		</dependency>
+
+		<!-- Adds the MVC class and method names to server spans -->
+		<dependency>
+			<groupId>io.zipkin.brave</groupId>
+			<artifactId>brave-instrumentation-spring-webmvc</artifactId>
+		</dependency>
+		<!-- Instruments the underlying OkHttpClient requests that call the backend -->
+		<dependency>
+			<groupId>io.zipkin.brave</groupId>
+			<artifactId>brave-instrumentation-okhttp3</artifactId>
+		</dependency>
+
+		<!-- Integrates so you can use log patterns like %X{traceId}/%X{spanId} -->
+		<dependency>
+			<groupId>io.zipkin.brave</groupId>
+			<artifactId>brave-context-slf4j</artifactId>
+		</dependency>
+
+		<!-- The below are needed to report traces to http://127.0.0.1:9411/api/v2/spans -->
+		<dependency>
+			<groupId>io.zipkin.brave</groupId>
+			<artifactId>brave</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.zipkin.reporter2</groupId>
+			<artifactId>zipkin-reporter-brave</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.zipkin.reporter2</groupId>
+			<artifactId>zipkin-sender-okhttp3</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
