@@ -1,7 +1,5 @@
 const app = require("express");
 const fetch = require("node-fetch");
-const dateFns = require('date-fns');
-const { zipkinFetch } = require('../middleware/zipkin');
 
 const router = app.Router();
 
@@ -13,10 +11,8 @@ router.get("/", async (req, resp) => {
 });
 
 router.post("/", async (req, resp) => {
-  const dateTime = dateFns.format(new Date(), 'dd-MMM-yy H:mm:ss');
-  console.log(`${dateTime} Hopping through the ESB ~`);
 
-  const response = await zipkinFetch("http://localhost:4000/checkout",{
+  const response = await fetch("http://localhost:4000/checkout",{
     method : 'POST',
     body: JSON.stringify(req.body),
     headers : {'Content-Type' : 'application/json'}

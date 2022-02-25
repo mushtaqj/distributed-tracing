@@ -7,7 +7,9 @@ var logger = require("morgan");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var checkoutRouter = require("./routes/checkout");
-const { zipkinMiddleware, tracer } = require("./middleware/zipkin");
+const { sdk } = require("./middleware/open-telemetry");
+
+sdk.start().then(_ => console.log('Start instrumenting ESB'))
 
 var app = express();
 
@@ -20,7 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-app.use(zipkinMiddleware({tracer}));
+// app.use(zipkinMiddleware({tracer}));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);

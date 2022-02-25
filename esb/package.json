@@ -6,6 +6,12 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@opentelemetry/api": "^1.0.4",
+    "@opentelemetry/auto-instrumentations-node": "^0.27.3",
+    "@opentelemetry/exporter-zipkin": "^1.0.1",
+    "@opentelemetry/resources": "^1.0.1",
+    "@opentelemetry/sdk-node": "^0.27.0",
+    "@opentelemetry/semantic-conventions": "^1.0.1",
     "cookie-parser": "~1.4.4",
     "date-fns": "^2.28.0",
     "debug": "~2.6.9",
@@ -13,11 +19,6 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
-    "node-fetch": "^2.0.0",
-    "zipkin": "^0.22.0",
-    "zipkin-context-cls": "^0.22.0",
-    "zipkin-instrumentation-express": "^0.22.0",
-    "zipkin-instrumentation-fetch": "^0.22.0",
-    "zipkin-transport-http": "^0.22.0"
+    "node-fetch": "^2.0.0"
   }
 }
