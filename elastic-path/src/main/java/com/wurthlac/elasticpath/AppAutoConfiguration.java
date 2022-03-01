@@ -12,14 +12,8 @@ import org.springframework.web.client.RestTemplate;
 public class AppAutoConfiguration
 {
   @Bean
-  RestTemplateCustomizer useOkHttpClient (final OkHttpClient okHttpClient)
+  RestTemplate getRestTemplate ()
   {
-    return restTemplate -> restTemplate.setRequestFactory(new OkHttp3ClientHttpRequestFactory(okHttpClient));
-  }
-
-  @Bean
-  RestTemplate getRestTemplate (final RestTemplateBuilder restTemplateBuilder)
-  {
-    return restTemplateBuilder.build();
+    return new RestTemplate();
   }
 }
