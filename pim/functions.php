@@ -13,7 +13,7 @@ function create_tracing($localServiceName, $localServiceIPv4, $localServicePort 
 {
     $httpReporterURL = getenv('HTTP_REPORTER_URL');
     if ($httpReporterURL === false) {
-        $httpReporterURL = 'http://localhost:9411/api/v2/spans';
+        $httpReporterURL = 'http://localhost:9411/';
     }
 
     $endpoint = Endpoint::create($localServiceName, $localServiceIPv4, null, $localServicePort);

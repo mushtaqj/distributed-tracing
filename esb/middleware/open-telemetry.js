@@ -5,7 +5,7 @@ const { SemanticResourceAttributes } = require('@opentelemetry/semantic-conventi
 const { Resource } = require('@opentelemetry/resources');
 
 const zipkinExporter = new ZipkinExporter({
-  url : 'http://localhost:9411/api/v2/spans'
+  url : 'http://localhost:9411/'
 });
 
 const sdk = new opentelemetry.NodeSDK({
